@@ -1,0 +1,34 @@
+{
+  "standard": "HIPAA",
+  "description": "Healthcare Security Rule baseline",
+  "rules": {
+    "USE_SSL": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "ENCRYPTED_STORAGE": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "AUDIT_LOGGING_ENABLED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "ACCESS_CONTROL_ENFORCED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "BACKUP_ENABLED": {
+      "expected": "True",
+      "severity": "MEDIUM"
+    },
+    "SESSION_TIMEOUT": {
+      "expected": "15",
+      "severity": "LOW"
+    },
+    "TWO_FACTOR_AUTH": {
+      "expected": "True",
+      "severity": "HIGH"
+    }
+  }
+}

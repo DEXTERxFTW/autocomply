@@ -1,0 +1,26 @@
+{
+  "standard": "NIST",
+  "description": "NIST baseline for general IT systems",
+  "rules": {
+    "USE_SSL": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "ENCRYPTED_STORAGE": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "DEBUG": {
+      "expected": "False",
+      "severity": "MEDIUM"
+    },
+    "AUDIT_LOGGING_ENABLED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "SESSION_TIMEOUT": {
+      "expected": "15",
+      "severity": "LOW"
+    }
+  }
+}

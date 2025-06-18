@@ -1,0 +1,131 @@
+Here's the **entire README.md** in one copy-paste block:
+
+---
+
+```markdown
+# AutoComply
+
+**Automated Configuration Drift & Cybersecurity Compliance Checker**
+
+AutoComply is a lightweight, CLI-based tool designed to scan system or application environment configurations against major cybersecurity compliance standards like **NIST**, **HIPAA**, and **PCI-DSS**. It detects configuration drift, flags non-compliant settings, and generates a Markdown report with a compliance score and severity levels.
+
+---
+
+## 🚀 Features
+
+- ✅ Supports multiple compliance standards (NIST, HIPAA, PCI-DSS)
+- 📊 Generates detailed Markdown reports with:
+  - PASS/FAIL status
+  - Compliance Score (in %)
+  - Severity levels: HIGH / MEDIUM / LOW
+- 🔁 Easy to extend with new rules and standards
+- 📁 JSON-based rule definitions
+
+---
+
+## 📁 Project Structure
+
+```
+
+autocomply/
+├── scanner.py                  # Main script
+├── report.md                   # Generated compliance report
+├── scans/
+│   └── sample\_env\_config.json  # Input environment config (to scan)
+└── baselines/
+├── nist\_baseline.json
+├── hipaa\_baseline.json
+└── pci\_baseline.json
+
+````
+
+---
+
+## 🛠️ How It Works
+
+1. You provide a system/environment configuration as a JSON file.
+2. Select a compliance standard (NIST, HIPAA, PCI).
+3. AutoComply compares your config against that standard’s baseline.
+4. Generates a `report.md` with results, score, and severity levels.
+
+---
+
+## 🧪 Example Usage
+
+Run the tool:
+
+```bash
+python scanner.py
+````
+
+Select a compliance standard when prompted:
+
+```
+Choose a compliance standard:
+- nist
+- hipaa
+- pci
+Standard: hipaa
+```
+
+View the output in your terminal and in `report.md`.
+
+---
+
+## 📄 Sample Baseline Rule
+
+```json
+"USE_SSL": {
+  "expected": "True",
+  "severity": "HIGH"
+}
+```
+
+---
+
+## ✅ Example Config (`scans/sample_env_config.json`)
+
+```json
+{
+  "USE_SSL": "False",
+  "ENCRYPTED_STORAGE": "True",
+  "SESSION_TIMEOUT": "5",
+  "AUDIT_LOGGING_ENABLED": "False"
+}
+```
+
+---
+
+## 💡 Extend It
+
+To add your own standard or modify rules, edit files inside the `baselines/` folder. Each rule must include:
+
+* `expected`: expected value
+* `severity`: LOW / MEDIUM / HIGH
+
+---
+
+## 📚 Standards Covered
+
+* [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+* [HIPAA Security Rule](https://www.hhs.gov/hipaa/)
+* [PCI-DSS](https://www.pcisecuritystandards.org/)
+
+---
+
+## 🔒 Disclaimer
+
+AutoComply is for educational and prototype/demo purposes. Always consult security professionals before relying on automated tools for compliance in production environments.
+
+---
+
+## 👨‍💻 Author
+
+Built by a cybersecurity enthusiast interested in malware analysis, reverse engineering, and secure system design.
+
+```
+
+---
+
+You can paste this directly into your `README.md`. Let me know if you want help turning it into a GitHub repository or adding project screenshots.
+```

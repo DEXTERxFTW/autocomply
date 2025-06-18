@@ -1,0 +1,34 @@
+{
+  "standard": "PCI-DSS",
+  "description": "Payment Card Industry compliance baseline",
+  "rules": {
+    "USE_SSL": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "CARD_DATA_ENCRYPTED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "LOGGING_ENABLED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "FIREWALL_ENABLED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "DEFAULT_PASSWORDS_CHANGED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "ACCESS_RESTRICTED": {
+      "expected": "True",
+      "severity": "HIGH"
+    },
+    "PATCHING_UP_TO_DATE": {
+      "expected": "True",
+      "severity": "MEDIUM"
+    }
+  }
+}
