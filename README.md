@@ -1,7 +1,3 @@
-Here's the **entire README.md** in one copy-paste block:
-
----
-
 ```markdown
 # AutoComply
 
@@ -111,7 +107,6 @@ View the output in your terminal and in `report.md`.
 }
 ```
 
----
 
 ## 💡 Extend It
 
@@ -139,6 +134,4 @@ AutoComply is for educational and prototype/demo purposes. Always consult securi
 ## 👨‍💻 Author
 
 Built by a cybersecurity enthusiast interested in malware analysis, reverse engineering, and secure system design.
-
-```
 
