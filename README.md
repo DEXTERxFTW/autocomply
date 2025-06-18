@@ -24,18 +24,31 @@ AutoComply is a lightweight, CLI-based tool designed to scan system or applicati
 ```
 
 autocomply/
+
 ├── scanner.py                  # Main script
+
 ├── report.md                   # Generated compliance report
+
 ├── scans/
+
 │   └── sample\_env\_config.json  # Input environment config (to scan)
+
 └── baselines/
+
 ├── nist\_baseline.json
+
 ├── hipaa\_baseline.json
+
 └── pci\_baseline.json
+
 ├── media/
+
 │   ├── terminal_scan.png
+
 │   ├── report_view.png
+
 │   └── folder_structure.png
+
 
 ````
 
