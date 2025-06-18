@@ -36,6 +36,10 @@ autocomply/
 ├── nist\_baseline.json
 ├── hipaa\_baseline.json
 └── pci\_baseline.json
+├── media/
+│   ├── terminal_scan.png
+│   ├── report_view.png
+│   └── folder_structure.png
 
 ````
 
@@ -47,8 +51,21 @@ autocomply/
 2. Select a compliance standard (NIST, HIPAA, PCI).
 3. AutoComply compares your config against that standard’s baseline.
 4. Generates a `report.md` with results, score, and severity levels.
+---
+
+## 🖼️ Screenshots
+
+### 🔹 Terminal Output
+![Scan in Terminal](media/terminal_scan.png)
+
+### 🔹 Generated Report
+![Report Output](media/report_view.png)
+
+### 🔹 Project Folder Structure
+![Folder View](media/folder_structure.png)
 
 ---
+
 
 ## 🧪 Example Usage
 
@@ -125,7 +142,3 @@ Built by a cybersecurity enthusiast interested in malware analysis, reverse engi
 
 ```
 
----
-
-You can paste this directly into your `README.md`. Let me know if you want help turning it into a GitHub repository or adding project screenshots.
-```
