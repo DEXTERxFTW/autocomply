@@ -65,21 +65,24 @@ autocomply/
 
 ## 🧪 Example Usage
 
-Run the tool:
+You can run the tool interactively or by passing arguments.
 
+**Interactive Mode:**
 ```bash
 python src/scanner.py
-````
-
-Select a compliance standard when prompted:
-
 ```
-Choose a compliance standard:
-- nist
-- hipaa
-- pci
-Standard: hipaa
+
+**Automated Mode (CLI Arguments):**
+```bash
+python src/scanner.py --standard nist
+python src/scanner.py --standard pci --config /path/to/my_config.json
 ```
+
+**Arguments:**
+- `-s`, `--standard`: Specify compliance standard (`nist`, `hipaa`, `pci`).
+- `-c`, `--config`: Specify path to a custom JSON config file.
+
+---
 
 View the output in your terminal and in `report.md`.
 

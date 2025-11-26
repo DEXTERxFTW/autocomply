@@ -1,5 +1,6 @@
 import json
 import os
+import argparse
 
 def load_json(filepath):
     if not os.path.exists(filepath):
@@ -55,20 +56,41 @@ def main():
         "pci": os.path.join(base_dir, "baselines", "pci_baseline.json")
     }
 
-    print("Choose a compliance standard:")
-    for name in available_standards:
-        print(f"- {name}")
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="AutoComply - Automated Compliance Checker")
+    parser.add_argument("-s", "--standard", help="Compliance standard to check (nist, hipaa, pci)", type=str.lower)
+    parser.add_argument("-c", "--config", help="Path to the configuration file to scan", default=os.path.join(base_dir, "scans", "sample_env_config.json"))
+    
+    args = parser.parse_args()
 
-    standard = input("Standard: ").lower()
+    # Determine standard: use argument if provided, otherwise prompt user
+    if args.standard:
+        standard = args.standard
+    else:
+        print("Choose a compliance standard:")
+        for name in available_standards:
+            print(f"- {name}")
+        standard = input("Standard: ").lower()
+
     if standard not in available_standards:
         print(f"Unsupported standard '{standard}'.")
         return
 
     baseline_path = available_standards[standard]
-    config_path = os.path.join(base_dir, "scans", "sample_env_config.json")
+    config_path = args.config
+
+    # Handle relative config paths from CLI
+    if not os.path.isabs(config_path):
+        # If path is relative, assume it's relative to current working directory
+        # unless it's the default, which we already constructed absolutely above.
+        if config_path != os.path.join(base_dir, "scans", "sample_env_config.json"):
+             config_path = os.path.abspath(config_path)
 
     baseline_data = load_json(baseline_path)
     actual_data = load_json(config_path)
+
+    if not actual_data: # Stop if config file wasn't found or empty
+        return
 
     if "rules" not in baseline_data:
         print("Invalid baseline format. Expected a 'rules' key.")
