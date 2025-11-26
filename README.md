@@ -50,19 +50,6 @@ autocomply/
 4. Generates a `report.md` with results, score, and severity levels.
 ---
 
-## 🖼️ Screenshots
-
-### 🔹 Terminal Output
-![Scan in Terminal](media/terminal_scan.png)
-
-### 🔹 Generated Report
-![Report Output](media/report_view.png)
-
-
-
----
-
-
 ## 🧪 Example Usage
 
 You can run the tool interactively or by passing arguments.
