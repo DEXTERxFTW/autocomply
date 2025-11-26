@@ -46,8 +46,8 @@ def compare_configs(standard, baseline_rules, actual_config):
     print("Report saved to report.md")
 
 def main():
-    # Use the script's directory as the base path to locate resources consistently
-    base_dir = os.path.dirname(os.path.abspath(__file__))
+    # Use the parent directory of the script (project root) as the base path
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     available_standards = {
         "nist": os.path.join(base_dir, "baselines", "nist_baseline.json"),

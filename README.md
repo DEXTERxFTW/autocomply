@@ -23,7 +23,9 @@ AutoComply is a lightweight, CLI-based tool designed to scan system or applicati
 ```
 
 autocomply/
-├── scanner.py                  # Main script
+├── src/
+│   ├── scanner.py              # Main script
+│   └── __init__.py
 ├── report.md                   # Generated compliance report
 ├── scans/
 │   └── sample\_env\_config.json  # Input environment config (to scan)
@@ -67,7 +69,7 @@ autocomply/
 Run the tool:
 
 ```bash
-python scanner.py
+python src/scanner.py
 ````
 
 Select a compliance standard when prompted:
