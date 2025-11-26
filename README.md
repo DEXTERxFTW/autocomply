@@ -33,10 +33,7 @@ autocomply/
 ├── nist\_baseline.json
 ├── hipaa\_baseline.json
 └── pci\_baseline.json
-├── media/
-│   ├── terminal_scan.png
-│   ├── report_view.png
-│   └── folder_structure.png
+
 
 ````
 
