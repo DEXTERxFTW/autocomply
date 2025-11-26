@@ -86,6 +86,30 @@ View the output in your terminal and in `report.md`.
 
 ---
 
+## 🐳 Docker Usage
+
+You can run AutoComply using Docker to ensure a consistent environment without needing to install Python or manage dependencies directly.
+
+#### 1. Build the Docker Image
+
+Navigate to the root of the project and build the Docker image:
+
+```bash
+docker build -t autocomply .
+```
+
+#### 2. Run the Docker Container
+
+Run the tool in an interactive container, mounting your current directory to access the generated `report.md`:
+
+```bash
+docker run -it -v $(pwd):/app autocomply
+```
+
+Follow the prompts to choose a compliance standard. The `report.md` will be saved in your project's root directory.
+
+---
+
 ## 📄 Sample Baseline Rule
 
 ```json
