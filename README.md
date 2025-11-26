@@ -58,8 +58,7 @@ autocomply/
 ### 🔹 Generated Report
 ![Report Output](media/report_view.png)
 
-### 🔹 Project Folder Structure
-![Folder View](media/folder_structure.png)
+
 
 ---
 
