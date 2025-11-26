@@ -99,10 +99,24 @@ View the output in your terminal and in `report.md`.
 
 ```json
 {
-  "USE_SSL": "False",
+  "DEBUG": "False",
+  "USE_SSL": "True",
+  "SECURE_HSTS_SECONDS": "11100000",
+  "ALLOWED_HOSTS": ["localhost", "127.0.0.1"],
+  "SESSION_COOKIE_SECURE": "True",
+  "CSRF_COOKIE_SECURE": "False",
   "ENCRYPTED_STORAGE": "True",
-  "SESSION_TIMEOUT": "5",
-  "AUDIT_LOGGING_ENABLED": "False"
+  "AUDIT_LOGGING_ENABLED": "True",
+  "SESSION_TIMEOUT": "15",
+  "ACCESS_CONTROL_ENFORCED": "True",
+  "BACKUP_ENABLED": "True",
+  "TWO_FACTOR_AUTH": "True",
+  "CARD_DATA_ENCRYPTED": "True",
+  "LOGGING_ENABLED": "True",
+  "FIREWALL_ENABLED": "True",
+  "DEFAULT_PASSWORDS_CHANGED": "True",
+  "ACCESS_RESTRICTED": "True",
+  "PATCHING_UP_TO_DATE": "True"
 }
 ```
 

@@ -20,7 +20,7 @@ def compare_configs(standard, baseline_rules, actual_config):
     for key, rule in baseline_rules.items():
         expected_value = rule["expected"]
         severity = rule.get("severity", "LOW").upper()
-        actual_value = actual_config.get(key)
+        actual_value = str(actual_config.get(key))
 
         total_checks += 1
 
@@ -46,10 +46,13 @@ def compare_configs(standard, baseline_rules, actual_config):
     print("Report saved to report.md")
 
 def main():
+    # Use the script's directory as the base path to locate resources consistently
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
     available_standards = {
-        "nist": "baselines/nist_baseline.json",
-        "hipaa": "baselines/hipaa_baseline.json",
-        "pci": "baselines/pci_baseline.json"
+        "nist": os.path.join(base_dir, "baselines", "nist_baseline.json"),
+        "hipaa": os.path.join(base_dir, "baselines", "hipaa_baseline.json"),
+        "pci": os.path.join(base_dir, "baselines", "pci_baseline.json")
     }
 
     print("Choose a compliance standard:")
@@ -62,7 +65,7 @@ def main():
         return
 
     baseline_path = available_standards[standard]
-    config_path = "scans/sample_env_config.json"
+    config_path = os.path.join(base_dir, "scans", "sample_env_config.json")
 
     baseline_data = load_json(baseline_path)
     actual_data = load_json(config_path)
